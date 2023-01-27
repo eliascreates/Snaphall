@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
 
     private let imageView: UIImageView = {
        let imageView = UIImageView()
@@ -24,23 +24,22 @@ class ViewController: UIViewController {
     @IBOutlet var emailField: UITextField!
     @IBOutlet var passwordField: UITextField!
     
+    @IBOutlet var signInButton: CButton!
+    
     var activeField: UITextField? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configBackgroundImage()
-        prepFields()
-        
-        usernameField.delegate = self
-        emailField.delegate = self
-        passwordField.delegate = self
-
+        prepViews()
         
     }
     
-    
-    
-    func prepFields() {
+    func prepViews() {
+        usernameField.delegate = self
+        emailField.delegate = self
+        passwordField.delegate = self
+        
         usernameField.leftSymbol(sysImage: "person")
         emailField.leftSymbol(sysImage: "envelope")
         passwordField.leftSymbol(sysImage: "lock")
@@ -48,20 +47,34 @@ class ViewController: UIViewController {
         usernameField.configTextEdit()
         passwordField.configTextEdit()
         emailField.configTextEdit()
+        
+        signInButton.configButton(title: "Sign In", for: .normal)
+        signInButton.backgroundColor = Colors.darkColor
+        signInButton.titleLabel?.font = UIFont(name: Font.noteFont, size: 18.0)
+        signInButton.makeRound()
+        
     
         usernameField.becomeFirstResponder()
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
-        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hideKeyboard)))
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self,
+                                                         action: #selector(hideKeyboard)))
         
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillShow(notification:)),
+                                               name: UIResponder.keyboardWillShowNotification,
+                                               object: nil)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillHide(notification:)),
+                                               name: UIResponder.keyboardWillHideNotification,
+                                               object: nil)
     }
     
     @objc func hideKeyboard() {
-        self.view.endEditing(true)
+        view.endEditing(true)
     }
     
 
@@ -78,7 +91,7 @@ class ViewController: UIViewController {
             
             if self.view.frame.origin.y >= 0 {
             
-                UIView.animate(withDuration: 0.25, delay: 0.0, options: UIView.AnimationOptions.curveEaseIn, animations: {
+                UIView.animate(withDuration: 1, delay: 0.0, options: UIView.AnimationOptions.curveEaseIn, animations: {
                     print("ORIGIN: \(self.view.frame.origin.y)")
                 
                     if fieldPosition > (keyboardY - 20) {
@@ -96,7 +109,7 @@ class ViewController: UIViewController {
     
     @objc func keyboardWillHide(notification: NSNotification) {
         
-        UIView.animate(withDuration: 0.25, delay: 0.0, options: UIView.AnimationOptions.curveEaseIn , animations: {
+        UIView.animate(withDuration: 1, delay: 0.0, options: UIView.AnimationOptions.curveEaseIn , animations: {
             
             self.view.frame.origin.y = 0
             
@@ -124,7 +137,7 @@ class ViewController: UIViewController {
 }
 
 
-extension ViewController: UITextFieldDelegate {
+extension LoginViewController: UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         activeField = textField

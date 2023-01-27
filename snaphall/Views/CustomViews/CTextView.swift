@@ -7,11 +7,9 @@
 
 import UIKit
 
-extension UITextField
-{
+extension UITextField {
     
-    func configTextEdit()
-    {
+    func configTextEdit() {
         layer.borderColor = Colors.redColor.cgColor
         textColor = .white
         tintColor = .white
@@ -24,18 +22,14 @@ extension UITextField
         
     }
     
-    
     func leftSymbol(sysImage: String) {
         let someView = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 30))
         let sideView = UIImageView(frame: CGRect(x: 30 / 2 , y: 10 / 2, width: 20, height: 20))
         
         sideView.image = UIImage(systemName: sysImage)
-        
         sideView.contentMode = .center
-        
         someView.addSubview(sideView)
         leftView = someView
-        
         leftViewMode = .always
     }
     
