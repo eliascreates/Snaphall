@@ -3,4 +3,70 @@
    uuid = "13CF24BD-6658-4FA3-8BF5-8E10EA25FEA7"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6022CA7F-4470-4DA3-841F-ADC5F03863EF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "snaphall/Controllers/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "fetchData(query:sender:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6022CA7F-4470-4DA3-841F-ADC5F03863EF - 31ee7608bc95e235"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in snaphall.HomeViewController.fetchData(query: Swift.Optional&lt;Swift.String&gt;, sender: Swift.String) -&gt; ()"
+                  moduleName = "snaphall"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iacd013/Documents/Projects/snaphall/snaphall/Controllers/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "744">
+               </Location>
+               <Location
+                  uuid = "6022CA7F-4470-4DA3-841F-ADC5F03863EF - 9b0d68b998c256b1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in snaphall.HomeViewController.fetchData(query: Swift.Optional&lt;Swift.String&gt;, sender: Swift.String) -&gt; ()"
+                  moduleName = "snaphall"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iacd013/Documents/Projects/snaphall/snaphall/Controllers/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "128">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "96F8592F-E970-43E9-B924-5ACE1E989C01"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "snaphall/Controllers/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "fetchData(query:sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

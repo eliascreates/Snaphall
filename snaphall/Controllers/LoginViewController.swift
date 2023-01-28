@@ -24,7 +24,7 @@ class LoginViewController: UIViewController {
     @IBOutlet var emailField: UITextField!
     @IBOutlet var passwordField: UITextField!
     
-    @IBOutlet var signInButton: CButton!
+    @IBOutlet var signInButton: UIButton!
     
     var activeField: UITextField? = nil
     
@@ -34,6 +34,15 @@ class LoginViewController: UIViewController {
         prepViews()
         
     }
+    
+    
+    @IBAction func login(_ sender: Any) {
+        
+        performSegue(withIdentifier: "login", sender: nil)
+        
+    }
+    
+    
     
     func prepViews() {
         usernameField.delegate = self
@@ -48,9 +57,8 @@ class LoginViewController: UIViewController {
         passwordField.configTextEdit()
         emailField.configTextEdit()
         
-        signInButton.configButton(title: "Sign In", for: .normal)
         signInButton.backgroundColor = Colors.darkColor
-        signInButton.titleLabel?.font = UIFont(name: Font.noteFont, size: 18.0)
+        signInButton.titleLabel?.textColor = Colors.redColor
         signInButton.makeRound()
         
     

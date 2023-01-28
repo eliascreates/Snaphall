@@ -11,10 +11,14 @@ class RegisterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
-
-
+    @IBAction func signUp(_ sender: Any) {
+        
+        performSegue(withIdentifier: "register", sender: nil)
+        
+        
+    }
+    
 
 }

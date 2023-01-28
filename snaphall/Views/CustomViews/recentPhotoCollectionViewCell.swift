@@ -1,14 +1,13 @@
 //
-//  PhotoCollectionViewCell.swift
+//  recentPhotoCollectionViewCell.swift
 //  snaphall
 //
-//  Created by IACD 013 on 2023/01/27.
+//  Created by IACD 013 on 2023/01/28.
 //
 
 import UIKit
 
-class PhotoCollectionViewCell: UICollectionViewCell {
-    
+class recentPhotoCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var imageView: UIImageView!
         
@@ -22,7 +21,6 @@ class PhotoCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         imageView.makeRound(8)
     }
-    
     
     func configure(imageURL: String) {
         guard let url = URL(string: imageURL) else {
@@ -41,5 +39,4 @@ class PhotoCollectionViewCell: UICollectionViewCell {
         task.resume()
         
     }
-    
 }

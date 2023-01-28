@@ -21,13 +21,16 @@ struct Response: Codable {
 
 struct Result: Codable {
     let id: String
+    let createdAt: String
     let description: String?
     let altDescription: String
     let urls: Urls
     let likes: Int
     
     enum CodingKeys: String, CodingKey {
-        case id, description
+        case id
+        case createdAt = "created_at"
+        case description
         case altDescription = "alt_description"
         case urls, likes
     }
@@ -40,3 +43,4 @@ struct Urls: Codable {
 enum Order {
     case latest, oldest, popular
 }
+
