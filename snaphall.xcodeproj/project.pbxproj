@@ -19,7 +19,9 @@
 		51F925F829844E6A0096DC0A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F925F729844E6A0096DC0A /* RegisterViewController.swift */; };
 		51F925FB29845BFC0096DC0A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F925FA29845BFC0096DC0A /* HomeViewController.swift */; };
 		51F925FD29845C0C0096DC0A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F925FC29845C0C0096DC0A /* SearchViewController.swift */; };
-		51F925FF29845C600096DC0A /* apiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F925FE29845C600096DC0A /* apiManager.swift */; };
+		51F925FF29845C600096DC0A /* ManagerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F925FE29845C600096DC0A /* ManagerAPI.swift */; };
+		51F92602298460AC0096DC0A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F92601298460AC0096DC0A /* Response.swift */; };
+		51F92604298476690096DC0A /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F92603298476690096DC0A /* PhotoCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +39,9 @@
 		51F925F729844E6A0096DC0A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		51F925FA29845BFC0096DC0A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		51F925FC29845C0C0096DC0A /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		51F925FE29845C600096DC0A /* apiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiManager.swift; sourceTree = "<group>"; };
+		51F925FE29845C600096DC0A /* ManagerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerAPI.swift; sourceTree = "<group>"; };
+		51F92601298460AC0096DC0A /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		51F92603298476690096DC0A /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +75,9 @@
 			isa = PBXGroup;
 			children = (
 				513B8AAF2943F32E0087365A /* Resources */,
-				51F925F929845B9F0096DC0A /* Controllers */,
+				51F926002984602E0096DC0A /* Model */,
 				513B8AB02943F3430087365A /* Views */,
+				51F925F929845B9F0096DC0A /* Controllers */,
 				513B8AA32943EC8B0087365A /* Info.plist */,
 			);
 			path = snaphall;
@@ -82,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				513B8AAC2943ED480087365A /* CButton.swift */,
+				51F92603298476690096DC0A /* PhotoCollectionViewCell.swift */,
 				513B8AB32943FF6F0087365A /* CTextView.swift */,
 			);
 			path = CustomViews;
@@ -123,9 +129,17 @@
 				51F925FA29845BFC0096DC0A /* HomeViewController.swift */,
 				513B8A992943EC8A0087365A /* LoginViewController.swift */,
 				51F925F729844E6A0096DC0A /* RegisterViewController.swift */,
-				51F925FE29845C600096DC0A /* apiManager.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		51F926002984602E0096DC0A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				51F925FE29845C600096DC0A /* ManagerAPI.swift */,
+				51F92601298460AC0096DC0A /* Response.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,11 +215,13 @@
 			files = (
 				513B8AB22943F7070087365A /* Constants.swift in Sources */,
 				513B8AB42943FF6F0087365A /* CTextView.swift in Sources */,
-				51F925FF29845C600096DC0A /* apiManager.swift in Sources */,
+				51F925FF29845C600096DC0A /* ManagerAPI.swift in Sources */,
 				51F925F829844E6A0096DC0A /* RegisterViewController.swift in Sources */,
 				51F925FD29845C0C0096DC0A /* SearchViewController.swift in Sources */,
+				51F92604298476690096DC0A /* PhotoCollectionViewCell.swift in Sources */,
 				51F925FB29845BFC0096DC0A /* HomeViewController.swift in Sources */,
 				513B8A9A2943EC8A0087365A /* LoginViewController.swift in Sources */,
+				51F92602298460AC0096DC0A /* Response.swift in Sources */,
 				513B8A962943EC8A0087365A /* AppDelegate.swift in Sources */,
 				513B8A982943EC8A0087365A /* SceneDelegate.swift in Sources */,
 				513B8AAD2943ED480087365A /* CButton.swift in Sources */,
