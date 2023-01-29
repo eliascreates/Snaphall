@@ -52,7 +52,7 @@ class SearchViewController: UIViewController {
                     self?.collectionView.reloadData()
                 }
                 
-                print("We got this!")
+               // print("We got this!")
             } catch {
                 print("Error")
                 

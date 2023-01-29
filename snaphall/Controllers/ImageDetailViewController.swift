@@ -48,19 +48,10 @@ class ImageDetailViewController: UIViewController {
         numberOfLikesLbl.text = String(selectedPhoto.likes)
         photoDescrLbl.text = selectedPhoto.description != nil ? selectedPhoto.description: selectedPhoto.altDescription
         
-        
-        let currDate = selectedPhoto.createdAt //"2016-05-03T11:00:28-04:00"
+        //I want to convert the string date into an actual date and change it's format
+        let currDate = selectedPhoto.createdAt //"2016-05-03T11:00:28-04:00" - 2016/05/03
         
 //        var string = "2016-05-03T11:00:28-04:00"
-//
-//
-//
-        
-//        let expectedFormat = Date.FormatStyle()
-//            .month().year().day()
-//            .hour().minute()
-//        let date = try? Date(string, strategy: expectedFormat)
-//
         
         createdAtLbl.text = currDate
         photoView.makeRound(8)

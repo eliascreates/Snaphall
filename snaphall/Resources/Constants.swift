@@ -19,7 +19,6 @@ struct Font {
     static let americanTypewrite = "American Typewriter"
 }
 
-
 extension UIView {
     func makeRound(_ radius: CGFloat? = nil) {
         if let radius = radius {
@@ -39,5 +38,3 @@ extension Date {
             .year().minute(.twoDigits).hour(.conversationalDefaultDigits(amPM: .abbreviated)))
     }
 }
-
-

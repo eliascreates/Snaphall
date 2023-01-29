@@ -38,9 +38,9 @@ struct Result: Codable {
 
 struct Urls: Codable {
     let regular: String
+    let small: String
 }
 
 enum Order {
     case latest, oldest, popular
 }
-

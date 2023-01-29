@@ -20,6 +20,8 @@ class SearchCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         imageView.makeRound(8)
+        imageView.layer.borderWidth = 1
+        imageView.layer.borderColor = UIColor.systemGray.cgColor
     }
     
     func configure(imageURL: String) {

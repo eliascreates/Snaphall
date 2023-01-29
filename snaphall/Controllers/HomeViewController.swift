@@ -10,20 +10,17 @@ import UIKit
 class HomeViewController: UIViewController {
     
     @IBOutlet var collectionView: UICollectionView!
-    
     @IBOutlet var recentPhotosCollectionView: UICollectionView!
     
     var results: [Result] = []
     var photoResults: [Result] = []
     var selectedPhoto: Result? = nil
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         fetchData(query: "office", sender: "First")
         fetchData(query: "drawings", sender: "Second")
-        
         
         recentPhotosCollectionView.delegate = self
         recentPhotosCollectionView.dataSource = self
@@ -33,11 +30,9 @@ class HomeViewController: UIViewController {
     }
     
     func fetchData(query: String? = nil, sender: String) {
-        
         var url = "https://api.unsplash.com/search/photos?page=1&query=drawings&client_id=XYj5oiG0aJa9F_3iaqjr4Y4abHgb1fHj6pUr4smEr2I"
         
         if let query = query, query.firstIndex(of: " ") == nil {
-            
             url = "https://api.unsplash.com/search/photos?page=1&query=\(query)&client_id=XYj5oiG0aJa9F_3iaqjr4Y4abHgb1fHj6pUr4smEr2I"
         }
         
@@ -56,8 +51,6 @@ class HomeViewController: UIViewController {
                 
                 DispatchQueue.main.async {
                     
-    
-                    print("Something happend")
                     if sender == "First" {
                         self?.results = jResults.results
                         self?.collectionView.reloadData()
@@ -67,15 +60,13 @@ class HomeViewController: UIViewController {
                     }
                 }
                 
-                print("We got this!")
+              //  print("We got this!")
             } catch {
                 print("Error")
-                
             }
         }
         task.resume()
     }
-    
     
     @IBSegueAction func showPhotoDetails(_ coder: NSCoder) -> ImageDetailViewController? {
         
@@ -129,9 +120,6 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             
             return cell
         }
-        
-        
-        
         
         return UICollectionViewCell()
     }

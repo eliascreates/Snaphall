@@ -42,8 +42,6 @@ class RegisterViewController: UIViewController {
         emailField.makeRound()
         passwordField.makeRound()
         signUpButton.makeRound()
-        
-        firstnameField.becomeFirstResponder()
     }
     
     

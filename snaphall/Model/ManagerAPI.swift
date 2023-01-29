@@ -12,11 +12,7 @@ class ManagerAPI {
     
 
 //    static let shared = ManagerAPI()
-    
-
-    
-    
-    
+ 
 }
 
 
