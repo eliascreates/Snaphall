@@ -20,7 +20,6 @@ class LoginViewController: UIViewController {
        return imageView
     }()
     
-    @IBOutlet var usernameField: UITextField!
     @IBOutlet var emailField: UITextField!
     @IBOutlet var passwordField: UITextField!
     
@@ -45,15 +44,12 @@ class LoginViewController: UIViewController {
     
     
     func prepViews() {
-        usernameField.delegate = self
         emailField.delegate = self
         passwordField.delegate = self
         
-        usernameField.leftSymbol(sysImage: "person")
         emailField.leftSymbol(sysImage: "envelope")
         passwordField.leftSymbol(sysImage: "lock")
         
-        usernameField.configTextEdit()
         passwordField.configTextEdit()
         emailField.configTextEdit()
         
@@ -62,7 +58,7 @@ class LoginViewController: UIViewController {
         signInButton.makeRound()
         
     
-        usernameField.becomeFirstResponder()
+        emailField.becomeFirstResponder()
     }
     
     
@@ -153,9 +149,7 @@ extension LoginViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
                 
-        if textField == usernameField {
-            emailField.becomeFirstResponder()
-        } else if textField == emailField {
+        if textField == emailField {
             passwordField.becomeFirstResponder()
         } else if textField == passwordField {
             passwordField.resignFirstResponder()

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class recentPhotoCollectionViewCell: UICollectionViewCell {
+class RecentPhotoCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var imageView: UIImageView!
         

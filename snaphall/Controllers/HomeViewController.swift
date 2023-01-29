@@ -121,7 +121,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             
             let url = photoResults[indexPath.row].urls.regular
             
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecentPhoto", for: indexPath) as? recentPhotoCollectionViewCell else {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecentPhoto", for: indexPath) as? RecentPhotoCollectionViewCell else {
                 return UICollectionViewCell()
             }
             

@@ -49,7 +49,7 @@ class ImageDetailViewController: UIViewController {
         photoDescrLbl.text = selectedPhoto.description != nil ? selectedPhoto.description: selectedPhoto.altDescription
         
         
-        var currDate = selectedPhoto.createdAt //"2016-05-03T11:00:28-04:00"
+        let currDate = selectedPhoto.createdAt //"2016-05-03T11:00:28-04:00"
         
 //        var string = "2016-05-03T11:00:28-04:00"
 //

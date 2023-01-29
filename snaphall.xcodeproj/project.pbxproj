@@ -16,7 +16,8 @@
 		513B8AA22943EC8B0087365A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 513B8AA02943EC8B0087365A /* LaunchScreen.storyboard */; };
 		513B8AB22943F7070087365A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513B8AB12943F7070087365A /* Constants.swift */; };
 		513B8AB42943FF6F0087365A /* CTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513B8AB32943FF6F0087365A /* CTextView.swift */; };
-		518EA3292985B09000496DA6 /* recentPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518EA3282985B09000496DA6 /* recentPhotoCollectionViewCell.swift */; };
+		518EA3292985B09000496DA6 /* RecentPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518EA3282985B09000496DA6 /* RecentPhotoCollectionViewCell.swift */; };
+		518EA32B2985DDC000496DA6 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518EA32A2985DDC000496DA6 /* SearchCollectionViewCell.swift */; };
 		51F925F829844E6A0096DC0A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F925F729844E6A0096DC0A /* RegisterViewController.swift */; };
 		51F925FB29845BFC0096DC0A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F925FA29845BFC0096DC0A /* HomeViewController.swift */; };
 		51F925FD29845C0C0096DC0A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F925FC29845C0C0096DC0A /* SearchViewController.swift */; };
@@ -37,7 +38,8 @@
 		513B8AA32943EC8B0087365A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		513B8AB12943F7070087365A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		513B8AB32943FF6F0087365A /* CTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTextView.swift; sourceTree = "<group>"; };
-		518EA3282985B09000496DA6 /* recentPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recentPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		518EA3282985B09000496DA6 /* RecentPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		518EA32A2985DDC000496DA6 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		51F925F729844E6A0096DC0A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		51F925FA29845BFC0096DC0A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		51F925FC29845C0C0096DC0A /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -89,7 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				51F92603298476690096DC0A /* PhotoCollectionViewCell.swift */,
-				518EA3282985B09000496DA6 /* recentPhotoCollectionViewCell.swift */,
+				518EA32A2985DDC000496DA6 /* SearchCollectionViewCell.swift */,
+				518EA3282985B09000496DA6 /* RecentPhotoCollectionViewCell.swift */,
 				513B8AB32943FF6F0087365A /* CTextView.swift */,
 			);
 			path = CustomViews;
@@ -216,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				518EA32B2985DDC000496DA6 /* SearchCollectionViewCell.swift in Sources */,
 				513B8AB22943F7070087365A /* Constants.swift in Sources */,
 				513B8AB42943FF6F0087365A /* CTextView.swift in Sources */,
 				51F925FF29845C600096DC0A /* ManagerAPI.swift in Sources */,
@@ -227,7 +231,7 @@
 				513B8A9A2943EC8A0087365A /* LoginViewController.swift in Sources */,
 				51F92602298460AC0096DC0A /* Response.swift in Sources */,
 				513B8A962943EC8A0087365A /* AppDelegate.swift in Sources */,
-				518EA3292985B09000496DA6 /* recentPhotoCollectionViewCell.swift in Sources */,
+				518EA3292985B09000496DA6 /* RecentPhotoCollectionViewCell.swift in Sources */,
 				513B8A982943EC8A0087365A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
