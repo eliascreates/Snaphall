@@ -8,10 +8,9 @@
 import UIKit
 
 class SearchViewController: UIViewController {
-
+    
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var collectionView: UICollectionView!
-    
     
     var searchResults: [Result] = []
     var selectedPhoto: Result? = nil
@@ -62,15 +61,11 @@ class SearchViewController: UIViewController {
         task.resume()
     }
     
-    
-    
     @IBSegueAction func showPhotoDetails(_ coder: NSCoder) -> ImageDetailViewController? {
+        
         return ImageDetailViewController(coder: coder, photo: selectedPhoto!)
     }
     
-    
-    
-
     @IBAction func unwindToSearch(unwind: UIStoryboardSegue) {
         
         
@@ -81,21 +76,16 @@ class SearchViewController: UIViewController {
 extension SearchViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        searchResults = []
-        
         if searchBar.text != nil {
-            
+            searchResults = []
             fetchData(query: searchBar.text)
         }
-        
-        
+        searchBar.resignFirstResponder()
     }
+    
 }
 
 extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    
-    
-    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return searchResults.count
@@ -108,11 +98,9 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchPhoto", for: indexPath) as? SearchCollectionViewCell else {
             return UICollectionViewCell()
         }
-        
         cell.configure(imageURL: url)
         
         return cell
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -123,8 +111,5 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
             performSegue(withIdentifier: "PhotoDetails", sender: nil)
         }
         collectionView.deselectItem(at: indexPath, animated: true)
-
     }
-    
-    
 }

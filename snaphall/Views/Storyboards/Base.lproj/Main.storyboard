@@ -44,8 +44,9 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="first name..." textAlignment="natural" minimumFontSize="17" background="person" catalog="system" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="9XA-bQ-RfB">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="first name" textAlignment="natural" minimumFontSize="17" background="person" catalog="system" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="9XA-bQ-RfB">
                                         <rect key="frame" x="0.0" y="40" width="353" height="40"/>
+                                        <color key="tintColor" systemColor="systemPinkColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="r4y-df-8GX"/>
                                         </constraints>
@@ -61,8 +62,9 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="last name..." textAlignment="natural" minimumFontSize="17" background="person" catalog="system" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ybz-0I-w7C">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="last name" textAlignment="natural" minimumFontSize="17" background="person" catalog="system" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ybz-0I-w7C">
                                         <rect key="frame" x="0.0" y="130" width="353" height="40"/>
+                                        <color key="tintColor" systemColor="systemPinkColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="QCE-d3-iWA"/>
                                         </constraints>
@@ -80,6 +82,7 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" background="envelope" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Fp8-dV-K3K">
                                         <rect key="frame" x="0.0" y="220" width="353" height="40"/>
+                                        <color key="tintColor" systemColor="systemPinkColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="QqU-Qe-NhZ"/>
                                         </constraints>
@@ -97,6 +100,7 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" background="lock" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="BOa-wg-u8i">
                                         <rect key="frame" x="0.0" y="310" width="353" height="40"/>
+                                        <color key="tintColor" systemColor="systemPinkColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="EAg-Wa-Con"/>
                                         </constraints>
@@ -112,6 +116,9 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="O1r-ja-ZsG" kind="unwind" unwindAction="unwindToLoginWithUnwind:" id="Qdd-Vp-q6U"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="already have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45J-fT-fDW">
                                 <rect key="frame" x="132.33333333333334" y="785.66666666666663" width="164.00000000000003" height="17"/>
@@ -138,10 +145,16 @@
                     </view>
                     <navigationItem key="navigationItem" id="tIR-oh-Zzd"/>
                     <connections>
+                        <outlet property="emailField" destination="Fp8-dV-K3K" id="Mon-Q3-gMH"/>
+                        <outlet property="firstnameField" destination="9XA-bQ-RfB" id="yqc-82-PqW"/>
+                        <outlet property="lastnameField" destination="ybz-0I-w7C" id="7a8-nn-cfb"/>
+                        <outlet property="passwordField" destination="BOa-wg-u8i" id="Ahh-OS-OWi"/>
+                        <outlet property="signUpButton" destination="9Ih-zN-Pph" id="w6e-ZD-Aib"/>
                         <segue destination="IiJ-q1-Hg8" kind="presentation" identifier="register" modalPresentationStyle="fullScreen" id="ClY-Lo-gyI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="O1r-ja-ZsG" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="761" y="-211"/>
         </scene>
@@ -665,7 +678,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Kl3-RW-xuq"/>
+        <segue reference="ClY-Lo-gyI"/>
         <segue reference="aoo-es-J0w"/>
     </inferredMetricsTieBreakers>
     <resources>

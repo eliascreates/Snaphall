@@ -95,7 +95,7 @@ class LoginViewController: UIViewController {
             
             if self.view.frame.origin.y >= 0 {
             
-                UIView.animate(withDuration: 1, delay: 0.0, options: UIView.AnimationOptions.curveEaseIn, animations: {
+                UIView.animate(withDuration: 0.3, delay: 0.0, options: UIView.AnimationOptions.curveEaseIn, animations: {
                     print("ORIGIN: \(self.view.frame.origin.y)")
                 
                     if fieldPosition > (keyboardY - 20) {
@@ -113,7 +113,7 @@ class LoginViewController: UIViewController {
     
     @objc func keyboardWillHide(notification: NSNotification) {
         
-        UIView.animate(withDuration: 1, delay: 0.0, options: UIView.AnimationOptions.curveEaseIn , animations: {
+        UIView.animate(withDuration: 0.3, delay: 0.0, options: UIView.AnimationOptions.curveEaseIn , animations: {
             
             self.view.frame.origin.y = 0
             
@@ -137,6 +137,12 @@ class LoginViewController: UIViewController {
         imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         view.sendSubviewToBack(imageView)
     }
+    
+    @IBAction func unwindToLogin(unwind: UIStoryboardSegue) {
+        
+    }
+    
+    
 
 }
 
